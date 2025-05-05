@@ -149,7 +149,7 @@ export const onBoard = async (req, res) => {
       userId,
       {
         ...req.body,
-        onBoarded: true,
+        isOnboarded: true,
       },
       { new: true }
     );
