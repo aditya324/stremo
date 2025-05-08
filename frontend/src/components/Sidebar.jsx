@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router";
 import { BellIcon, HomeIcon, ShipWheelIcon, UsersIcon } from "lucide-react";
 
 const Sidebar = () => {
-    const { isLoading, data: authUser, error } = useAuthUSer();
+    const { isLoading, data: authUser, error } = useAuthUser();
   console.log(authUser, "user");
   const location = useLocation();
   const currentPath = location.pathname;
