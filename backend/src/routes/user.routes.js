@@ -17,8 +17,8 @@ router.use(protectRoute);
 router.get("/", recomendedUsers);
 router.get("/friends", getMyFriends);
 router.post("/friend-request/:id", sendFriendRequest);
-router.put("/friend-request/:id", acceptFriendRequest);
-router.get("/friend-request", getFriendRequests);
-router.get("/outgoing-friend-request", getOutGoingFriendRequests);
+router.put("/friend-request/:id/accept", acceptFriendRequest);
+router.get("/friend-requests", getFriendRequests);
+router.get("/outgoing-friend-requests", getOutGoingFriendRequests);
 
 export default router;
