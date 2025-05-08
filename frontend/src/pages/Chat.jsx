@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import useAuthUser from "../hooks/useAuthUser";
+import useAuthUser from "../hooks/useAuthUser.js";
 import { useQuery } from "@tanstack/react-query";
 import { getStreamToken } from "../../lib/api";
 
@@ -17,7 +17,7 @@ import { StreamChat } from "stream-chat";
 import toast from "react-hot-toast";
 
 import ChatLoader from "../components/ChatLoader";
-import useAuthUSer from "../hooks/useAuthUser";
+
 import CallButton from "../components/CallButton";
 
 const STREAM_API_KEY = import.meta.env.VITE_STREAM_API_KEY;
@@ -30,7 +30,7 @@ const ChatApp = () => {
   const [channel, setChannel] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const { isLoading, data: authUser, error } = useAuthUSer();
+  const { isLoading, data: authUser, error } = useAuthUser();
 
   console.log(authUser);
 

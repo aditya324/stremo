@@ -10,11 +10,11 @@ import {
   ShuffleIcon,
 } from "lucide-react";
 import { LANGUAGES } from "../constants";
-import useAuthUSer from "../hooks/useAuthUSer";
+import useAuthUser from "../hooks/useAuthUser.js";
 import { completeOnBoarding } from "../../lib/api";
 
 const OnboardingPage = () => {
-  const { isLoading, data: authUser, error } = useAuthUSer();
+  const { isLoading, data: authUser, error } = useAuthUser();
   const queryClient = useQueryClient();
 
   const [formState, setFormState] = useState({

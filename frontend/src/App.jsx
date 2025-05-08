@@ -13,13 +13,13 @@ import { useQuery } from "@tanstack/react-query";
 import { axiosInstance } from "../lib/axios.js";
 import PageLoader from "./components/PageLoader.jsx";
 import { getAuthUser } from "../lib/api.js";
-import useAuthUSer from "./hooks/useAuthUSer.js";
+import useAuthUser from "./hooks/useAuthUser.js";
 import Layout from "./components/Layout.jsx";
 import { useThemeStore } from "./store/useThemeStore.js";
 import ChatApp from "./pages/Chat.jsx";
 
 const App = () => {
-  const { isLoading, data: authUser, error } = useAuthUSer();
+  const { isLoading, data: authUser, error } = useAuthUser();
   const { theme, setTheme } = useThemeStore();
 
   const isAuthenticated = Boolean(authUser);
